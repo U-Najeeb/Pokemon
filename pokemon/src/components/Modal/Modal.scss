@@ -1,0 +1,23 @@
+.modal--stats{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 35%;
+}
+
+.modal {
+  animation: fadeIn 1s ease-in-out;
+  position: fixed;
+  top: 10rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: 100rem;
+    opacity: 0;
+  }
+  100% {
+    right: 50rem;
+    opacity: 1;
+  }
+}
