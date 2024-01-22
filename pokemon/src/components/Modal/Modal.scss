@@ -1,4 +1,4 @@
-.modal--stats{
+.modal--stats {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -11,13 +11,32 @@
   top: 10rem;
 }
 
+.fadeOut {
+  animation: fadeOut 1s ease-in-out;
+  display: none;
+}
+
+
 @keyframes fadeIn {
   0% {
     left: 100rem;
     opacity: 0;
   }
+  50% {
+    opacity: 0;
+  }
   100% {
     right: 50rem;
     opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    right: 50rem;
+    opacity: 1;
+  }
+  100% {
+    left: 100rem;
+    opacity: 0;
   }
 }

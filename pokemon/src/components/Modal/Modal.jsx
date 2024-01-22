@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
+// import { useState } from "react";
+
 import pokeballBw from "../../assets/pokeball-bw.png";
 import "./Modal.scss"
 
-const Modal = ({ onClick, id, name, image, type, height, weight, stats, statsName }) => {
+const Modal = ({ onClick, id, name, image, type, height, weight, stats, statsName, modalState}) => {
+
+
   return (
     <div
       style={{
@@ -21,7 +25,7 @@ const Modal = ({ onClick, id, name, image, type, height, weight, stats, statsNam
         backgroundSize: "cover",
       }}
 
-      className="modal"
+      className={`${modalState ? "modal" : "fadeOut"}`}
     >
       <div
         onClick={onClick}
@@ -36,6 +40,7 @@ const Modal = ({ onClick, id, name, image, type, height, weight, stats, statsNam
           fontWeight: "900",
           cursor: "pointer",
         }}
+        className="terminate"
       >
         X
       </div>
